@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Ovo je neophodno za SPA aplikacije
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Dodajemo environment varijable za EmailJS
+[context.production.environment]
+  VITE_EMAILJS_SERVICE_ID = "service_mo3g4jp"
+  VITE_EMAILJS_TEMPLATE_ID = "template_3knfq2b"
+  VITE_EMAILJS_PUBLIC_KEY = "gD_VOaKn7S_KiVrPx" 
