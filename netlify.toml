@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "CI=false npm run build"
   publish = "dist"
 
 # Ovo je neophodno za SPA aplikacije
@@ -12,4 +12,5 @@
 [context.production.environment]
   VITE_EMAILJS_SERVICE_ID = "service_mo3g4jp"
   VITE_EMAILJS_TEMPLATE_ID = "template_3knfq2b"
-  VITE_EMAILJS_PUBLIC_KEY = "gD_VOaKn7S_KiVrPx" 
+  VITE_EMAILJS_PUBLIC_KEY = "gD_VOaKn7S_KiVrPx"
+  CI = "false" 
