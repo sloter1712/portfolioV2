@@ -1,6 +1,7 @@
 [build]
-  command = "CI=false npm run build"
+  command = "chmod +x build.sh && ./build.sh"
   publish = "dist"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF . ':!package-lock.json'"
 
 # Ovo je neophodno za SPA aplikacije
 [[redirects]]
@@ -13,4 +14,5 @@
   VITE_EMAILJS_SERVICE_ID = "service_mo3g4jp"
   VITE_EMAILJS_TEMPLATE_ID = "template_3knfq2b"
   VITE_EMAILJS_PUBLIC_KEY = "gD_VOaKn7S_KiVrPx"
-  CI = "false" 
+  CI = "false"
+  NODE_VERSION = "18" 
